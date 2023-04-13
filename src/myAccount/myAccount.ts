@@ -1,6 +1,7 @@
 
+import { localStorageType } from "index";
 let personalInfoLS: string = localStorage.getItem('personalInfo') as string;
-let personalInfo: object = JSON.parse(personalInfoLS);
+let personalInfo: localStorageType = JSON.parse(personalInfoLS);
 console.log(personalInfo);
 
 let myPicture: string = personalInfo.pic;
@@ -9,14 +10,19 @@ let personalInfoAddress: string = personalInfo.address as string;
 const myPicContainer = document.getElementById('myPicContainer') as HTMLDivElement
 const personalInfoContainer = document.getElementById('personalInfoContainer') as HTMLDivElement;
 const container = document.getElementById('container') as HTMLDivElement;
+  console.log(new URL("../media/Choco.jpg", import.meta.url).toString())
 
 displayItems(personalInfo)
 function displayItems(items: object): any {
 
   container.innerHTML = createHtmlString(items)
 
+
   function createHtmlString(item: any) {
     let domObject: string;
+    console.warn(item);
+    console.warn(new URL("../media/Brown.jpg", import.meta.url).toString())
+    
     if (item.pic == "Brown.jpg")
       domObject = `<img src="${new URL("../media/Brown.jpg", import.meta.url).toString()}" alt="pfp">`
     else if (item.pic == "Choco.jpg")
@@ -64,10 +70,12 @@ deleteBtn.style.display = "none";
 
 
 function displayItems1(){
-const img = document.createElement('img') as HTMLImageElement;
-const imgUrl = new URL(`../media/Bye.png`, import.meta.url);
-img.src = imgUrl.toString()
-myPicContainer.appendChild(img);
+  const img = document.createElement('img') as HTMLImageElement;
+  const imgUrl = new URL(`../media/Bye.png`, import.meta.url);
+  console.log("testing",imgUrl);
+  
+  img.src = imgUrl.toString()
+  myPicContainer.appendChild(img);
 }
 
 const password = document.getElementById('password');

@@ -5,6 +5,13 @@ export type userType = {
     pic: string
 }
 
+export type localStorageType = {
+    address: string,
+    username: string,
+    password: string,
+    pic: string,
+}
+
 const logInBtn = document.getElementById('logInBtn') as HTMLButtonElement;
 const userNameInput = document.getElementById('UserName') as HTMLInputElement;
 const passwordInput = document.getElementById('password') as HTMLInputElement;
