@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
 
     box-sizing: border-box;
@@ -181,4 +182,189 @@ body {
 .goToPersnalInfo{
 
     background-color: rgb(178, 178, 242);
+=======
+* {
+
+    box-sizing: border-box;
+}
+
+:root{
+
+    --grey: #555
+
+}
+ul {
+    padding: 0;
+    overflow-y: scroll;
+}
+
+.itemsStatus div {
+    margin:0.5rem;
+    display: flex;
+    justify-content: center;
+    border: .5px solid grey;
+    border-radius: 15px;
+    
+    
+    justify-content: flex-start;
+}
+
+.itemsStatus div img {
+    width: 30px;
+    margin: 10px;
+}
+
+
+button {
+
+    outline: none;
+    background: transparent;
+
+    border: none;
+    cursor: pointer;
+    font-size: 10px;
+
+}
+
+body {
+    background-color: rgb(168, 240, 236);
+    text-align: center;
+}
+
+.list {
+
+    width: 30rem;
+
+    margin: auto;
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+
+.header {
+
+    height: 48px;
+    padding: 8px;
+    font-size: 24px;
+
+    border-radius: 20px 20px 0 0;
+
+    background: rgb(2, 0, 36);
+    background: linear-gradient(302deg, rgba(2, 0, 36, 1) 0%, rgba(9, 121, 110, 1) 35%, rgba(0, 212, 255, 1) 100%);
+
+}
+
+.contents {
+    overflow-y: scroll;
+  
+    height: 39rem;
+}
+
+
+.items .item .itemsStatus {
+
+    margin: 0.5rem;
+    padding: 5px 8px;
+    display: grid;
+}
+
+.items .item .itemsStatus .divStatus {
+    display: flex;
+}
+
+.item_delete {
+    font-size: 16px;
+    transition: all 300ms ease-in-out;
+}
+
+.item_delete:hover {
+    color: red;
+    transform: scale(2);
+}
+
+
+.goToSecond {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.footer {
+
+    background: rgb(2, 0, 36);
+    background: linear-gradient(302deg, rgba(2, 0, 36, 1) 0%, rgba(9, 121, 110, 1) 35%, rgba(0, 212, 255, 1) 100%);
+
+    border-radius: 0 0 20px 20px;
+}
+
+.footer_input {
+
+    width: 100%;
+    height: 3rem;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    padding: 10px 16px
+}
+
+.footer_button {
+    width: 4rem;
+    height: 4rem;
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+
+    transition: all 300ms ease-in-out;
+}
+
+.footer_button:hover {
+    transform: scale(1.2);
+}
+
+
+.container {
+
+    overflow: hidden;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.container .item {
+    width: 7rem;
+    height: 10rem;
+    background-color: whitesmoke;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .item img {
+    width: 4rem;
+    height: auto;
+}
+
+.container .item p {
+    font-size: .8rem;
+    color: #666666;
+ 
+}
+
+.myUser {
+    border: 4px solid pink;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.item img {
+    margin: 0 auto;
+}
+.goToPersnalInfo{
+
+    background-color: rgb(178, 178, 242);
+>>>>>>> master
 }
