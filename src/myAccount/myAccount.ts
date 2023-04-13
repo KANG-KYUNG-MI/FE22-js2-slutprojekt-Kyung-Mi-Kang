@@ -3,6 +3,7 @@ import { localStorageType } from "index";
 let personalInfoLS: string = localStorage.getItem('personalInfo') as string;
 let personalInfo: localStorageType = JSON.parse(personalInfoLS);
 console.log(personalInfo);
+console.log(new URLSearchParams(location.search));
 
 let myPicture: string = personalInfo.pic;
 let personalInfoAddress: string = personalInfo.address as string;
