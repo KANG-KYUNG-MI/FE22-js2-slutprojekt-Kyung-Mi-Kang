@@ -5,7 +5,7 @@ export type messageType = {
   msg: string
 }
 
-const containers = document.querySelector('.containers')! as HTMLDivElement;
+//const containers = document.querySelector('.containers')! as HTMLDivElement;
 const container = document.querySelector('.container')! as HTMLDivElement;
 const inputName = document.querySelector('#inputName')! as HTMLInputElement;
 const submitBtn = document.querySelector('#btn')! as HTMLButtonElement;

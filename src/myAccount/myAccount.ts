@@ -8,9 +8,9 @@ let myPicture: string = personalInfo.pic;
 let personalInfoAddress: string = personalInfo.address as string;
 
 const myPicContainer = document.getElementById('myPicContainer') as HTMLDivElement
-const personalInfoContainer = document.getElementById('personalInfoContainer') as HTMLDivElement;
+//const personalInfoContainer = document.getElementById('personalInfoContainer') as HTMLDivElement;
 const container = document.getElementById('container') as HTMLDivElement;
-  console.log(new URL("../media/Choco.jpg", import.meta.url).toString())
+  //console.log(new URL("../media/Choco.jpg", import.meta.url).toString())
 
 displayItems(personalInfo)
 function displayItems(items: object): any {
@@ -20,6 +20,7 @@ function displayItems(items: object): any {
 
   function createHtmlString(item: any) {
     let domObject: string;
+    console.warn(import.meta.url);
     console.warn(item);
     console.warn(new URL("../media/Brown.jpg", import.meta.url).toString())
     
