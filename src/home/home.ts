@@ -65,16 +65,20 @@ function displayItems(items: object) {
     let parcedAllUsers = JSON.parse(localStorage.getItem('allUserInfo') as string)
 
     console.log(individualUser);
-    let domObject: string;
+    let domObject,url: string;
     if (individualUser.pic == "Brown.jpg")
-      domObject = `<img src="${new URL("../media/Brown.jpg", import.meta.url).toString()}" alt="pfp">`
+      url = new URL("../media/Brown.jpg", import.meta.url).toString()
     else if (individualUser.pic == "Choco.jpg")
-      domObject = `<img src="${new URL("../media/Choco.jpg", import.meta.url).toString()}" alt="pfp">`
+      url = new URL("../media/Choco.jpg", import.meta.url).toString()
     else if (individualUser.pic == "ConMuzi.jpg")
-      domObject = `<img src="${new URL("../media/ConMuzi.jpg", import.meta.url).toString()}" alt="pfp">`
+      url = new URL("../media/ConMuzi.jpg", import.meta.url).toString()
     else if (individualUser.pic == "Selly.jpg")
-      domObject = `<img src="${new URL("../media/Selly.jpg", import.meta.url).toString()}" alt="pfp">`
-
+      url = new URL("../media/Selly.jpg", import.meta.url).toString()
+    else
+      url="";
+      domObject = `<img src="${url}" alt="pfp">`;
+      
+    if(parcedMyUser.username === individualUser.username) localStorage.setItem( "userPicUrl",url);
 
     return `
       <div class="item ${parcedMyUser.username === individualUser.username ? 'myUser' : ''}">

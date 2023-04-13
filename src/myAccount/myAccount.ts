@@ -3,7 +3,7 @@ import { localStorageType } from "index";
 let personalInfoLS: string = localStorage.getItem('personalInfo') as string;
 let personalInfo: localStorageType = JSON.parse(personalInfoLS);
 console.log(personalInfo);
-console.log(new URLSearchParams(location.search));
+// console.log(new URLSearchParams(location.search));
 
 let myPicture: string = personalInfo.pic;
 let personalInfoAddress: string = personalInfo.address as string;
@@ -21,18 +21,19 @@ function displayItems(items: object): any {
 
   function createHtmlString(item: any) {
     let domObject: string;
-    console.warn(import.meta.url);
-    console.warn(item);
-    console.warn(new URL("../media/Brown.jpg", import.meta.url).toString())
+    // console.warn(import.meta.url);
+    // console.warn(item);
+    // console.warn(new URL("../media/Brown.jpg", import.meta.url).toString())
     
-    if (item.pic == "Brown.jpg")
-      domObject = `<img src="${new URL("../media/Brown.jpg", import.meta.url).toString()}" alt="pfp">`
-    else if (item.pic == "Choco.jpg")
-      domObject = `<img src="${new URL("../media/Choco.jpg", import.meta.url).toString()}" alt="pfp">`
-    else if (item.pic == "ConMuzi.jpg")
-    domObject = `<img src="${new URL("../media/ConMuzi.jpg", import.meta.url).toString()}" alt="pfp">` 
-      else 
-      domObject = `<img src="${new URL("../media/Selly.jpg", import.meta.url).toString()}" alt="pfp">`
+    // if (item.pic == "Brown.jpg")
+    //   domObject = `<img src="${new URL("../media/Brown.jpg", import.meta.url).toString()}" alt="pfp">`
+    // else if (item.pic == "Choco.jpg")
+    //   domObject = `<img src="${new URL("../media/Choco.jpg", import.meta.url).toString()}" alt="pfp">`
+    // else if (item.pic == "ConMuzi.jpg")
+    // domObject = `<img src="${new URL("../media/ConMuzi.jpg", import.meta.url).toString()}" alt="pfp">` 
+    //   else 
+    //   domObject = `<img src="${new URL("../media/Selly.jpg", import.meta.url).toString()}" alt="pfp">`
+      domObject = `<img src="${localStorage.getItem("userPicUrl")}" alt="pfp">`
 
     return domObject + `
     <div class="item"> 
