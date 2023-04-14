@@ -55,11 +55,15 @@ logInBtn.addEventListener('click', (e) => {
     let password = passwordInput.value;
     e.preventDefault();
     getData();
-    setLoginUser(users)
+    setLoginUser(users);
+
+    
     if(!Object.values(users).find((user) => username === user.username && password === user.password))   {
         alert('User not found')
     }
 
+    userNameInput.value = '';
+    passwordInput.value = '';
 })
 
 function setLoginUser(users) {

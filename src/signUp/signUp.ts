@@ -112,18 +112,8 @@ const isDataExits: string = localStorage.getItem('allUserInfo') as string;
     enterName.value = '';
     enterPicture.value = '';
 
-
   });
   
-  // let goToSecond = document.querySelector('.goToMyAccount') as HTMLDivElement;;
-  // //const logo = document.querySelector('.logo');
-  
-  // goToSecond.addEventListener('click', (e) => {
-  //   e.preventDefault();
-    
-  //   location.assign('../myAccount/myAccount.html');
-  // });
-  
   
   
   
@@ -131,93 +121,3 @@ const isDataExits: string = localStorage.getItem('allUserInfo') as string;
 
 
 
-
-
-
-
-  // enterName.addEventListener('change', (e) => {
-  //   newUser.name = e.target.value;
-  //   console.log(newUser.name);
-  // });
-  
-  // enterPassword.addEventListener('change', (e) => {
-  //   newUser.password = e.target.value;
-  //   console.log(newUser.password);
-  // });
-  
-  // enterPicture.addEventListener('change', (e) => {
-  //   newUser.pic = e.target.value;
-  //   console.log(newUser.pic);
-  // });
-  
-  // insertBtn.addEventListener('click', (e) => {
-  //   e.preventDefault();
-  //   console.log(newUser);
-  //   putData(newUser, newIndex);
-  //   showItems()
-  
-  //   enterName.value = '';
-  //   enterPassword.value = '';
-  //   enterPicture.value = '';
-  // });
-  
-  // async function putData(newUser, newIndex) {
-  //   const url = `https://js2-slutprojekt-default-rtdb.europe-west1.firebasedatabase.app/${newIndex}.json`;
-  
-  //   const init = {
-  //     method: 'PUT',
-  //     body: JSON.stringify(newUser),
-  //     headers: {
-  //       'Content-type': 'application/json; charset=UTF-8',
-  //     },
-  //   };
-  
-  //   const response = await fetch(url, init);
-  //   const data = await response.json();
-  //   showItems()
-  // }
-  
-  // function putItemsIntoLocalstorage(items) {
-  //   localStorage.setItem('personalInfo', JSON.stringify(items));
-  
-  //   // if (!localStorage.getItem('personalInfo')) {
-  //   //   localStorage.setItem('personalInfo', '[]');
-  //   // }
-  // }
-  
-  // signUpBtn.addEventListener('click',(e)=>{
-  //   e.preventDefault();
-  //   onButtonClick();
-  // })
-  
-  // function onButtonClick(event, productsIndex) {
-  //   playAnime()
-  //   console.log(productsIndex);
-  //   console.log(productsIndex.id);
-  
-  //   const productId = productsIndex.id;
-  //   addItemToCart(productId);
-  // }
-  
-  // // Adding the product in the cart
-  // function addItemToCart(productId) {
-  //   let product = products.find(function (product) {
-  //     return product.id == productId;
-  //   });
-  
-  //   if (cart.length == 0) {
-  //     cart.push(product);
-  //   } else {
-  //     let res = cart.find((element) => element.id == productId);
-  
-  //     if (res === undefined) {
-  //       cart.push(product);
-  //     }
-  //   }
-  //   console.log(cart);
-  //   localStorage.setItem('cart', JSON.stringify(cart));
-  
-  //   const cartQuantity = document.querySelector('.cart-qty');
-  //   cartQuantity.innerText = cart.length;
-  // }
-  
