@@ -2,11 +2,17 @@
 
     box-sizing: border-box;
 }
-
+a{
+    text-decoration: none;
+}
 :root{
 
     --grey: #555
 
+}
+
+a{
+    text-decoration: node;
 }
 ul {
     padding: 0;
