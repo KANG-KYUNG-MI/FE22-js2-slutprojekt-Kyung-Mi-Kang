@@ -95,25 +95,7 @@ function createHtmlString(item: any) {
 }
 
 function createHtmlString01(items: Object) {
-  // items.filter((item: any) => {
-  //   //console.log(userProfileInfo.username)
-  //   console.log(item)
-  //   if (item.username === userProfileInfo.username) {
-  //     let el = `<div> 
-  //         <p class="item_name">MSG: ${item.msg}</p>   
-  //       </div>`;
-  //     msgContainer.innerHTML += el
-
-
-  //   } else {
-  //     let el = `<div> 
-  //         <p class="item_name">MSG: </p>   
-  //       </div>`;
-  //     msgContainer.innerHTML += el
-
-  //   }
-  // })
-
+  
   items.forEach( (item:messageType )=> {
     //console.log(userProfileInfo.username)
     console.log(item,userProfileInfo)
@@ -123,13 +105,7 @@ function createHtmlString01(items: Object) {
         </div>`;
       msgContainer.innerHTML += el
     } 
-    //else {
-    //   let el = `<div> 
-    //       <p class="item_name">MSG: </p>   
-    //     </div>`;
-    //   msgContainer.innerHTML += el
-
-    // }
+   
   })
 }
 
